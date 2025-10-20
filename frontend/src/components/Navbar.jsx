@@ -54,9 +54,8 @@ const Navbar = () => {
                 </NavLink>
                    <div className='hidden xl:hidden lg:group-hover:block  absolute right-0  '>
                         <div className='flex items-center gap-2 flex-col w-32 px-2 py-4 mt-4 bg-slate-200 text-gray-600 font-semibold rounded-3xl' >
-                        <p className='cursor-pointer hover:text-black'>My profile</p> 
-                        <NavLink to='/orders' className='cursor-pointer  hover:text-black' >Orders</NavLink>      
                         <NavLink to='/login' className='cursor-pointer  hover:text-black' >Login</NavLink>
+                        <NavLink to='/orders' className='cursor-pointer  hover:text-black' >Orders</NavLink>      
 
                         </div>
                    </div>
@@ -67,7 +66,7 @@ const Navbar = () => {
               <NavLink to='/cart' className='relative'>
               
               <img src={assets.cart_icon} className='flex w-5 min-w-5' alt="" />
-             <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>100</p>
+             <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>0</p>
 
               </NavLink>
 

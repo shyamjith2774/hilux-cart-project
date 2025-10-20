@@ -146,7 +146,7 @@ const Collection = () => {
         <div className={`flex items-center justify-center mb-10 gap-2 ${search ? 'h-[20x]': 'hidden'}`}>
             <input type="text" placeholder='Serch items' className='w-[80%] h-[45px] pl-25 md:pl-55 border-2 rounded-full'/>
                <div onClick={()=>{setsearch(false)}}>
-                 <img src={assets.cross_icon} className='w-4' />
+                 <img src={assets.cross_icon} className='w-4 cursor-pointer' />
                </div>
        
           </div>
