@@ -79,7 +79,7 @@ return productData ? (
                   {/* description and review section */}
          <div className='mt-20'>
             <div className='flex'>
-              <b className='border px-5 py-3 text-sm'>Descriptio</b>
+              <b className='border px-5 py-3 text-sm'>Description</b>
               <p className='border px-5 py-3 text-sm'>Reviews (74)</p>
             </div>
 
