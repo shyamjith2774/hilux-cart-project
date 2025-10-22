@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext'
 
 import { useParams } from 'react-router-dom'
 import { assets } from '../assets/assets'
+import {toast} from "react-toastify"
 
 const Product = () => {
   const {productId} = useParams()
@@ -17,13 +18,22 @@ const Product = () => {
       if(foundProduct){
         setproductData(foundProduct)
         setimage(foundProduct.image[0])
-       console.log(foundProduct);
+       
       }
       
 
 },[products,productId])
 
- 
+  const SelectButtonToast=(()=>{
+    if(size.length==0){
+    toast.error('Select Product Size')
+    }
+    else{
+      toast.success("✅ Product added successfully!");
+    }
+  })
+
+
 return productData ? (
     <div className='border-t-2 border-gray-200   pt-10 transition-opacity ease-in duration-500 opacity-100 '>
       {/* product data */}
@@ -66,7 +76,7 @@ return productData ? (
                 ))}
               </div>
             </div>
-           <button className='bg-black text-white px-8 py-3 active:bg-gray-500'>ADD TO CART</button>
+           <button onClick={()=>{SelectButtonToast( )}} className='bg-black text-white px-8 py-3 active:bg-gray-500'>ADD TO CART</button>
            <hr  className='mt-8 md:w-4/5'/>
            <div className='text-sm text-gray-500 flex flex-col gap-1 mt-5'>
             <p>100% Original product</p>
@@ -92,8 +102,7 @@ return productData ? (
             </div>
             
            </div>         
-   
-   
+        
     </div>
   ): <div className='opacity-0 flex items-center'>Loading...</div>
 }

@@ -62,7 +62,7 @@ const Collection = () => {
 
 
   return (
-    <div className='flex flex-col md:flex-row gap-1 md:gap-10 pt-10 border-t'>
+    <div className='flex flex-col md:flex-row gap-1 md:gap-10 md:pt-10 border-t'>
           
         {/* filter options */}
         <div className=' min-w-60'>

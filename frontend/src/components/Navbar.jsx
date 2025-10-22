@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between py-3 md:py-5   '>
         
         <Link to='/'>
-        <img src={assets.logo} alt="logo1" className='w-36 h-10   hover:scale-80 transition  ease-in-out '/>
+        <img src={assets.logo} alt="logo1" className='w-36 h-10  md: hover:scale-80 transition  ease-in-out '/>
         </Link>
 
         <ul className='hidden md:flex items-center gap-5  font-light'>
@@ -41,15 +41,15 @@ const Navbar = () => {
           
           
           <div className='flex items-center gap-5'>
-            <NavLink to='/collection' >
-           <img src={assets.search_icon} className='w-5 ' onClick={()=>{setsearch(true)}} />
+            <NavLink to='/collection'>
+           <img src={assets.search_icon} className='w-5 bg-white ' onClick={()=>{setsearch(true)}} />
 
             </NavLink>
               
               {/* profile icon code  */}
               <div className='group relative'>
                    
-                <NavLink to='/login'>
+                <NavLink to='/login' >
                 <img src={assets.profile_icon} className='flex w-5' alt="" />
                 </NavLink>
                    <div className='hidden xl:hidden lg:group-hover:block  absolute right-0  '>
@@ -65,7 +65,7 @@ const Navbar = () => {
            {/* cart logo  */}
               <NavLink to='/cart' className='relative'>
               
-              <img src={assets.cart_icon} className='flex w-5 min-w-5' alt="" />
+              <img src={assets.cart_icon} className='flex w-5 min-w-5  bg-white  ' alt="" />
              <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]'>0</p>
 
               </NavLink>
