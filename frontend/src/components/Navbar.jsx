@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between py-3 md:py-5   '>
         
         <Link to='/'>
-        <img src={assets.logo} alt="logo1" className='w-36 h-10  md: hover:scale-80 transition  ease-in-out '/>
+        <img src={assets.logo1} alt="logo1" className='w-36 h-10  md:scale-130 transition  ease-in-out '/>
         </Link>
 
         <ul className='hidden md:flex items-center gap-5  font-light'>
