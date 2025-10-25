@@ -8,7 +8,7 @@ const Hero = () => {
                 {/* left container  */}
             <div className='w-full md:w-[50%] flex items-center justify-center '>
 
-                <div className='flex flex-col text-[#414141] py-10 px-8 md:px-10 gap-2 lg:gap-2 '>
+                <div className='flex flex-col text-[#414141] py-10 px-8 md:px-10 gap-2 lg:gap-2 cursor-pointer'>
                    
                     <div className='flex items-center gap-2 '>
                         <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
