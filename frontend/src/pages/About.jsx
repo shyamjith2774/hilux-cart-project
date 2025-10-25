@@ -43,7 +43,7 @@ const About = () => {
           <p>We meticulously select and vet each product to ensure it meets our stringent quality standards.</p>
          </div>
 
-         <div className='border-y px-10 md:px-16 py-8 md:py-20 flex flex-col ga-5'>
+         <div className='border px-10 md:px-16 py-8 md:py-20 flex flex-col ga-5'>
           <b>Convenience:</b>
           <p>With our user-friendly interface and hassle-free ordering process, shopping has never been easier.</p>
          </div>

@@ -161,7 +161,8 @@ const Collection = () => {
 
           {/* sortbox */}
 
-          <select className='border-1   border-gray-500 text-sm px-2 rounded-xl'>
+          <select className='w-[100px] md:w-[150px] border-1   border-gray-500 text-sm px-2 rounded-xl'>
+           
             <option value="relevent">Sort by:Relevant</option>
             <option value="low to high">Sort by:Low to high</option>
             <option value="high to low">Sort by:High to Low</option>
