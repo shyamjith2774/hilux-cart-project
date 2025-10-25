@@ -15,7 +15,7 @@ const Hero = () => {
                         <p className='font-medium text-xl md:text-base lg:text-2xl '> OUR BESTSELLERS</p>
                     </div>
                     
-                    <h1 className='prata-regular text-[26px]  md:text-3xl  lg:text-4xl  leading-relaxed hover:text-red-300 duration-200'>LATEST ARRIVALS</h1>
+                    <h1 className='prata-regular text-[26px]  md:text-3xl  lg:text-4xl  leading-relaxed hover:text-red-300 duration-200 cursor-pointer'>LATEST ARRIVALS</h1>
                      
                      <div className='flex items-center gap-2'>
                         <p className='font-medium text-xl md:text-base lg:text-2xl'> SHOP NOW</p>
