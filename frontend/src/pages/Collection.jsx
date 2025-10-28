@@ -11,6 +11,8 @@ const Collection = () => {
   const [category, setCategory] = useState([])
   const [subCategory, setsubCategory] = useState([])
   const { search, setsearch } = useContext(ShopContext)
+  const [searchQuery, setSearchQuery] = useState("");  // 🔧 NEW
+
   
 
 
@@ -54,20 +56,31 @@ const Collection = () => {
     }
 
     if (subCategory.length > 0) {
-      productscopy = productscopy.filter(item =>
-        subCategory.includes(item.subCategory?.toLowerCase())
+      productscopy = productscopy.filter(item =>subCategory.includes(item.subCategory?.toLowerCase())
       );
     }
+
+     if (searchQuery.trim() !== "") {
+          const query = searchQuery.toLowerCase();
+          productscopy = productscopy.filter(item =>item.name.toLowerCase().includes(query)
+    );
+       }
 
    
     setfilterProducts(productscopy);
   };
 
-
+   // clear the text inside search bar and makes the ui show every items when search bar is closed
+useEffect(() => {
+  if (!search) {
+    setSearchQuery("");   
+  }
+}, [search]);
  
+  // renders items based on the filters when buttons selcted or searched in searcbar
   useEffect(() => {
     applyfilter();
-  }, [category, subCategory, products]);
+  }, [category, subCategory, products,searchQuery]);
 
 
 
@@ -129,7 +142,7 @@ const Collection = () => {
       <div className='flex-1 py-5 md:py-0'>
         {/* search bar */}
         <div className={`flex items-center justify-center mb-10 gap-2 ${search ? 'h-[20x]' : 'hidden'}`}>
-          <input type="text" placeholder='Search items' className='w-[80%] h-[45px] pl-25 md:pl-55 border-2 rounded-full'/>
+          <input type="text" placeholder='Search items'   value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}  className='w-[80%] h-[45px] pl-25 md:pl-55 border-2 rounded-full'/>
           <div onClick={() => { setsearch(false) }}>
             <img src={assets.cross_icon} className='w-4 cursor-pointer'/>
           </div>
@@ -143,11 +156,11 @@ const Collection = () => {
             <p className='w-8 md:w-11 h-[2px] bg-[#414141]'></p>
           </div>
 
-          <select className='w-[100px] md:w-[150px] border-1 border-gray-500 text-sm px-2 rounded-xl'>
+          {/* <select className='w-[100px] md:w-[150px] border-1 border-gray-500 text-sm px-2 rounded-xl'>
             <option value="relevent">Sort by: Relevant</option>
             <option value="low to high">Sort by: Low to high</option>
             <option value="high to low">Sort by: High to Low</option>
-          </select>
+          </select> */}
         </div>
 
         {/* show products */}
