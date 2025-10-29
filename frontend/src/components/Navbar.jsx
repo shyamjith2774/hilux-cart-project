@@ -55,7 +55,7 @@ const Navbar = () => {
                    <div className='hidden xl:hidden lg:group-hover:block  absolute right-0  '>
                         <div className='flex items-center gap-2 flex-col w-32 px-2 py-4 mt-4 bg-slate-200 text-gray-600 font-semibold rounded-3xl' >
                         <NavLink to='/login' className='cursor-pointer  hover:text-black' >Login</NavLink>
-                        <NavLink to='/orders' className='cursor-pointer  hover:text-black' >Orders</NavLink>      
+                        {/* <NavLink to='/orders' className='cursor-pointer  hover:text-black' >Orders</NavLink>       */}
 
                         </div>
                    </div>
