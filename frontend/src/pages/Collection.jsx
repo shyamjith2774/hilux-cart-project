@@ -62,7 +62,7 @@ const Collection = () => {
 
      if (searchQuery.trim() !== "") {
           const query = searchQuery.toLowerCase();
-          productscopy = productscopy.filter(item =>item.name.toLowerCase().includes(query)
+          productscopy = productscopy.filter(item =>item.name.toLowerCase().includes(query )
     );
        }
 
