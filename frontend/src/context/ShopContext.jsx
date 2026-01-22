@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState,useEffect } from 'react';
 import { products } from "../assets/assets";
 
 
@@ -11,7 +11,12 @@ const delivery_fee=10
 const [search,setsearch]=useState(false)
 const [Tokens,settokens]=useState('')
 
-
+//9:49utbe
+useEffect(()=>{
+        if(!Tokens && localStorage.getItem('token')){
+            settokens(localStorage.getItem('token'))
+        }
+},[])
 
 const value={products,delivery_fee,currency,search,setsearch,Tokens,settokens}
 
